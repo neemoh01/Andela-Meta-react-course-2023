@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "address": "Ojijo",
+        "country": "Kenya",
+        "description": "This is a description",
+        "price": 100000,
+        "photo": 34444,
+        "type": "rent"
+    },
+    {
+        "id": 2,
+        "address": "Ojijo",
+        "country": "Kenya",
+        "description": "This is a description",
+        "price": 100000,
+        "photo": 34444,
+        "type": "rent"
+    },
+    {
+        "id": 3,
+        "address": "Ojijo",
+        "country": "Kenya",
+        "description": "This is a description",
+        "price": 100000,
+        "photo": 34444,
+        "type": "rent"
+    }
+]
