@@ -14,7 +14,7 @@
         "country": "Kenya",
         "description": "This is a description",
         "price": 100000,
-        "photo": 34444,
+        "photo": "34444",
         "type": "rent"
     },
     {
@@ -23,7 +23,7 @@
         "country": "Kenya",
         "description": "This is a description",
         "price": 100000,
-        "photo": 34444,
+        "photo": "34444",
         "type": "rent"
     }
 ]
