@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import './style.css';
 import Header from './components/Header'
 
@@ -15,6 +15,17 @@ function App() {
     FetchHouses();
   }
     , [])
+
+  const FeaturedHouse = useMemo(() => {
+    console.log("useMemo called");
+    if (allHouses.length) {
+      const randomIndex = Math.floor(Math.random() * allHouses.length);
+      return allHouses[randomIndex];
+    }
+  }, [allHouses])
+
+
+
 
   return (
     <div className="container">
