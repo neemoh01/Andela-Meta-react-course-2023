@@ -1,6 +1,6 @@
 import React from 'react'
 import './main.css'
-import logo from './GlobLogo.png'
+import logo from './GloboLogo.png'
 
 const Header = ({ subtitle }) => {
     return (
