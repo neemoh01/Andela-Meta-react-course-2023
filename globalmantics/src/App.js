@@ -1,6 +1,8 @@
 import { useEffect, useState, useMemo } from "react"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './style.css';
 import Header from './components/Header'
+import FeaturedHouse from './components/FeaturedHouse'
 
 function App() {
 
@@ -16,7 +18,7 @@ function App() {
   }
     , [])
 
-  const FeaturedHouse = useMemo(() => {
+  const featuredhouses = useMemo(() => {
     console.log("useMemo called");
     if (allHouses.length) {
       const randomIndex = Math.floor(Math.random() * allHouses.length);
@@ -28,9 +30,17 @@ function App() {
 
 
   return (
-    <div className="container">
-      <Header subtitle="Providing Houses All Over The World" />
-    </div>
+    <Router>
+      <div className="container">
+        <Header subtitle="Providing Houses All Over The World" />
+
+        <Switch>
+          <Route exact path="/">
+            <FeaturedHouse house={featuredhouses} />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
