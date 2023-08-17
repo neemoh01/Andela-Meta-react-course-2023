@@ -1,10 +1,12 @@
 import React from 'react'
 import './main.css'
+import logo from './GlobLogo.png'
+
 const Header = ({ subtitle }) => {
     return (
         <header className="row">
             <div className='col-md-5'>
-                <img src='#' className="logo" alt="logo" />
+                <img src={logo} className="logo" alt="logo" />
             </div>
             <div className='col-md-7 mt-5 subtitle'>
                 {subtitle}
