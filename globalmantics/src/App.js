@@ -5,6 +5,7 @@ import Header from './components/Header'
 import FeaturedHouse from './components/FeaturedHouse'
 import HouseFilter from './components/HouseFilter'
 import SearchResult from './components/SearchResult'
+import HouseFromQuery from "./components/HouseFromQuery";
 
 function App() {
 
@@ -41,6 +42,10 @@ function App() {
 
           <Route path="/searchresults/:country">
             <SearchResult allHouses={allHouses} />
+          </Route>
+
+          <Route path="/house/:id">
+            <HouseFromQuery allHouses={allHouses} />
           </Route>
 
           <Route exact path="/">

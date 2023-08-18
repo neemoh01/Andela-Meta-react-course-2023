@@ -1,8 +1,12 @@
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import './search.css'
 
 const SearchRultsRow = ({ house }) => {
+    const history = useHistory();
 
-    const setActive = () => { }
+    const setActive = () => {
+        history.push(`/house/${house.id}`);
+    }
 
 
     return (
