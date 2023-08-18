@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react"
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './style.css';
 import Header from './components/Header'
@@ -6,30 +6,14 @@ import FeaturedHouse from './components/FeaturedHouse'
 import HouseFilter from './components/HouseFilter'
 import SearchResult from './components/SearchResult'
 import HouseFromQuery from "./components/HouseFromQuery";
+import UseHouses from "./hooks/UseHouses";
+import UseFeaturedHouses from "./hooks/UseFeaturedHouses";
 
 function App() {
 
-  const [allHouses, setAllHouses] = useState([]);
+  const allHouses = UseHouses();
 
-  useEffect(() => {
-    const FetchHouses = async () => {
-      const resp = await fetch("/house.json");
-      const houses = await resp.json();
-      setAllHouses(houses);
-    };
-    FetchHouses();
-  }
-    , [])
-
-  const featuredhouses = useMemo(() => {
-    console.log("useMemo called");
-    if (allHouses.length) {
-      const randomIndex = Math.floor(Math.random() * allHouses.length);
-      return allHouses[randomIndex];
-    }
-  }, [allHouses])
-
-
+  const featuredhouses = UseFeaturedHouses(allHouses);
 
 
   return (
