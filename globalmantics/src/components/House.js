@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './house.css'
 import emailIcon from './Email.png'
 import FormInquiry from './FormInquiry';
+import PropTypes from 'prop-types'
 
 
 const House = ({ house }) => {
@@ -38,6 +39,13 @@ const House = ({ house }) => {
         </div>
 
     );
+}
+
+//  propTypes is a static property of a component that is an object whose keys are 
+// the names of the properties that the component expects to receive, and whose 
+// values are the data types of those properties.
+House.propTypes = {
+    house: PropTypes.object.isRequired
 }
 
 export default House;
