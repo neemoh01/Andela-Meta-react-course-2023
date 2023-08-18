@@ -24,7 +24,8 @@ const HouseFilter = () => {
                 Look for your dream house in country:
             </div>
             <div className="col-md-4 mb-3">
-                <select className="form-select" aria-label="Default select example" onChange={onSearchChange}>
+                <select className="form-select" aria-label="Default select example"
+                    onChange={onSearchChange}>
                     <option value="" selected>Country</option>
                     {countries.map((c) => (
                         <option key={c} value={c}>{c}</option>
