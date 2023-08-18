@@ -1,6 +1,10 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useContext } from "react";
+import HousesContext from "../context/HouseContext";
 
-const HouseFilter = ({ allHouses }) => {
+
+const HouseFilter = () => {
+    const { allHouses } = useContext(HousesContext);
 
     const history = useHistory();
 
