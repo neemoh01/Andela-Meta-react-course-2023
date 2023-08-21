@@ -12,6 +12,7 @@ import UseHouses from "./hooks/UseHouses";
 import UseFeaturedHouses from "./hooks/UseFeaturedHouses";
 import HousesContext from './context/HouseContext';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -47,6 +48,8 @@ function App() {
 
 
           </Switch>
+
+          <Footer />
         </div>
       </HousesContext.Provider>
     </Router>

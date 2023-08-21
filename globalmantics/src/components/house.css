@@ -2,3 +2,8 @@
     font-size: larger;
     color: coral;
 }
+
+.col-md-7 img {
+    width: 500px;
+    height: 400px;
+}
