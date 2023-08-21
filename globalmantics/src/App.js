@@ -11,6 +11,7 @@ import HouseFromQuery from "./components/HouseFromQuery";
 import UseHouses from "./hooks/UseHouses";
 import UseFeaturedHouses from "./hooks/UseFeaturedHouses";
 import HousesContext from './context/HouseContext';
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -24,9 +25,13 @@ function App() {
       <HousesContext.Provider value={{ allHouses }}>
         <div className="container">
           <Header subtitle="Providing Houses All Over The World" />
-          <HouseFilter />
+          <NavBar />
+
 
           <Switch>
+            <Route path="/filter">
+              <HouseFilter />
+            </Route>
 
             <Route path="/searchresults/:country">
               <SearchResult />
@@ -39,6 +44,8 @@ function App() {
             <Route exact path="/">
               <FeaturedHouse house={featuredhouses} />
             </Route>
+
+
           </Switch>
         </div>
       </HousesContext.Provider>

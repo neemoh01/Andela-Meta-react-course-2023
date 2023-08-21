@@ -41,29 +41,29 @@
     },
     {
         "id": 6,
-        "address": "Ojijo",
+        "address": "Ushirika Road,Karen",
         "country": "Kenya",
-        "description": "This is a description",
-        "price": 100000,
-        "photo": "34444",
+        "description": "Exquisite 6-Bedroom Family Home with Scenic Views in a Gated Compound.",
+        "price": 200000,
+        "photo": "234567",
         "type": "rent"
     },
     {
         "id": 7,
-        "address": "Ojijo",
+        "address": "Muthaiga",
         "country": "Kenya",
-        "description": "This is a description",
-        "price": 100000,
-        "photo": "34444",
+        "description": "8 Bed House.This beautiful home is located at the leafy suburbs of Old Muthaiga,it sit's on 1.25acres, beautiful green garden with trees a big parking space, spacious bedrooms, modern kitchen,with a big pantry ,a swimming pool and all the bedrooms ensuite with an sQ for two asking price is 560M negotiable",
+        "price": 500000,
+        "photo": "456789",
         "type": "rent"
     },
     {
         "id": 8,
-        "address": "Ojijo",
+        "address": "South C",
         "country": "Kenya",
-        "description": "This is a description",
-        "price": 100000,
-        "photo": "34444",
+        "description": "4 Bed Townhouse with En Suite.This is an exciting new addition to the already developed Five Star Estates Phase I and II and indeed will bring a sophisticated and architectural uplift to its environs.",
+        "price": 220000,
+        "photo": "87955554",
         "type": "rent"
     }
 ]
