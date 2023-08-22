@@ -18,7 +18,7 @@ import HouseList from './components/HouseList'
 
 function App() {
 
-  const allHouses = UseHouses();
+  const { allHouses } = UseHouses();
 
   const featuredhouses = UseFeaturedHouses(allHouses);
 

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import House from './House';
 
 const FeaturedHouse = ({ house }) => {
@@ -14,7 +15,7 @@ const FeaturedHouse = ({ house }) => {
                 <House house={house} />
             </div>
         );
-    return (<div>No featured house at this time</div>);
+    return (<div>No featured house at this time </div>);
 }
 
 export default FeaturedHouse;

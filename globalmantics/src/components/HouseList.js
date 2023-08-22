@@ -1,54 +1,22 @@
 import UseHouses from "../hooks/UseHouses"
 
-
-import { useState } from "react";
-
-
-
 const HouseList = () => {
 
 
-    const [address, setAddress] = useState("");
-    const [country, setCountry] = useState("");
-    const [price, setPrice] = useState(0);
-    const [type, setType] = useState("");
-    const [description, setDescription] = useState("");
 
-    const allHouses = UseHouses();
+    const { allHouses, newHouse } = UseHouses()
 
-    const nextId = allHouses.length + 1;
 
-    const house = {
-
-        address: address,
-        country: country,
-        price: price,
-        type: type,
-        description: description,
-        id: nextId
+    const handelNewHouse = () => {
+        const addHouse = {
+            id: 67,
+            address: "123 Main St",
+            country: "USA",
+            price: 234500,
+            features: ["fireplace", "pool", "finished basement"]
+        }
+        newHouse(addHouse)
     }
-
-
-
-
-    const addHouse = () => {
-        setAddress("123 Main St");
-
-        setCountry("USA");
-        setPrice(1000000);
-        setType("Ranch");
-        setDescription("A nice house in the suburbs");
-        // console.log(house);
-        const newHouse = [...allHouses, house];
-        console.log(newHouse);
-
-
-    }
-
-
-
-
-
 
     return (
         <div>
@@ -79,7 +47,7 @@ const HouseList = () => {
 
                 </tbody>
             </table>
-            <button className="btn btn-primary" onClick={addHouse} >Add</button>
+            <button className="btn btn-primary" onClick={handelNewHouse} >Add</button>
 
         </div>
     )

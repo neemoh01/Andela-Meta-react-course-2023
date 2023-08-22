@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 const UseHouses = () => {
     const [allHouses, setAllHouses] = useState([]);
 
+    const newHouse = (addHouse) => {
+        setAllHouses([...allHouses, addHouse])
+    }
+
     useEffect(() => {
         const FetchHouses = async () => {
             const resp = await fetch("/house.json");
@@ -14,7 +18,7 @@ const UseHouses = () => {
 
 
         , [])
-    return allHouses
+    return { newHouse, allHouses }
 }
 
 export default UseHouses;
