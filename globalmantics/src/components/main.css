@@ -14,12 +14,13 @@
 }
 
 .footer {
+    bottom: 0;
     clear: both;
     text-align: center;
     position: relative;
     background-color: rgb(255, 190, 166);
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20%;
     border-radius: 2px;
     width: 100%;
 }
