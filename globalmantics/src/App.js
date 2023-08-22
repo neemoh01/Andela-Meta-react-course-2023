@@ -13,6 +13,8 @@ import UseFeaturedHouses from "./hooks/UseFeaturedHouses";
 import HousesContext from './context/HouseContext';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import HouseList from './components/HouseList'
+
 
 function App() {
 
@@ -28,15 +30,20 @@ function App() {
           <Header subtitle="Providing Houses All Over The World" />
           <NavBar />
 
-
           <Switch>
             <Route path="/filter">
               <HouseFilter />
             </Route>
 
+            <Route path="/houses">
+              <HouseList />
+            </Route>
+
             <Route path="/searchresults/:country">
               <SearchResult />
             </Route>
+
+
 
             <Route path="/house/:id">
               <HouseFromQuery />

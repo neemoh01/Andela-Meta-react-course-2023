@@ -14,6 +14,7 @@ const NavBar = () => {
                         <div className="navbar-nav">
                             <a className="nav-link" aria-current="page" href="/">Home</a>
                             <a className="nav-link" href="/filter">Search</a>
+                            <a className="nav-link" href="/houses">View Houses</a>
                         </div>
                     </div>
                 </div>

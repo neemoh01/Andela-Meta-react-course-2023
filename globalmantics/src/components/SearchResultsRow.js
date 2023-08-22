@@ -14,7 +14,7 @@ const SearchRultsRow = ({ house }) => {
             <tr className="search-results-row" onClick={setActive}>
                 <td>{house.address}</td>
                 <td>{house.price}</td>
-                <td>{house.likes}</td>
+                {/* <td>{house.description}</td> */}
             </tr>
         </>
     );
