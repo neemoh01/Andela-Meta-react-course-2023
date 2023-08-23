@@ -1,4 +1,5 @@
 import UseHouses from "../hooks/UseHouses"
+import CurrencyFormatter from "./helpers/CurrencyFormatter"
 
 const HouseList = () => {
 
@@ -40,7 +41,7 @@ const HouseList = () => {
                             <tr key={house.id}>
                                 <td>{house.address}</td>
                                 <td>{house.country}</td>
-                                <td>{house.price}</td>
+                                <td>{CurrencyFormatter.format(house.price)}</td>
                             </tr>
                         )
                     })}

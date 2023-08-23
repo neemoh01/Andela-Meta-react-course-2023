@@ -3,6 +3,7 @@ import './house.css'
 import emailIcon from './Email.png'
 import FormInquiry from './FormInquiry';
 import PropTypes from 'prop-types'
+import CurrencyFormatter from './helpers/CurrencyFormatter'
 
 
 const House = ({ house }) => {
@@ -30,7 +31,9 @@ const House = ({ house }) => {
                     <img src={`/images/${house.photo}.jpeg`} alt='House' />
                 </div>
                 <div className='col-md-5'>
-                    <p className='price'>${house.price}</p>
+                    <p className='price'>
+                        {CurrencyFormatter.format(house.price)}
+                    </p>
                     <p>{house.description}</p>
                     <img src={emailIcon} height='50' alt='inquiry' onClick={inquiryClick} />
                     {inquiryShown && <FormInquiry house={house} />}
