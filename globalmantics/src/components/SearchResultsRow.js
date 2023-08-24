@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import './search.css'
+import CurrencyFormatter from './helpers/CurrencyFormatter'
 
 const SearchRultsRow = ({ house }) => {
     const history = useHistory();
@@ -13,7 +14,11 @@ const SearchRultsRow = ({ house }) => {
         <>
             <tr className="search-results-row" onClick={setActive}>
                 <td>{house.address}</td>
-                <td>{house.price}</td>
+                <td>{CurrencyFormatter.format(house.price)}</td>
+                {/* 
+    available for sale or rent */}
+                <td>For {house.type}</td>
+
                 {/* <td>{house.description}</td> */}
             </tr>
         </>
