@@ -14,6 +14,9 @@ import HousesContext from './context/HouseContext';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import HouseList from './components/HouseList'
+import { useState } from 'react';
+
+import HouseRow from './components/HouseRow';
 
 
 function App() {
@@ -21,6 +24,8 @@ function App() {
   const { allHouses } = UseHouses();
 
   const featuredhouses = UseFeaturedHouses(allHouses);
+
+  const [houseSelect, setHouseSelect] = useState(null);
 
 
   return (
@@ -36,12 +41,17 @@ function App() {
             </Route>
 
             <Route path="/houses">
-              <HouseList />
+              <HouseList selectHouse={setHouseSelect} />
+            </Route>
+
+            <Route path="/select-house/:id">
+              <HouseRow selectHouse={houseSelect} />
             </Route>
 
             <Route path="/searchresults/:country">
               <SearchResult />
             </Route>
+
 
 
 

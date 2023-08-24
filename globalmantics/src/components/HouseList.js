@@ -1,11 +1,28 @@
 import UseHouses from "../hooks/UseHouses"
 import CurrencyFormatter from "./helpers/CurrencyFormatter"
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 
-const HouseList = () => {
-
-
+const HouseList = ({ selectHouse }) => {
 
     const { allHouses, newHouse } = UseHouses()
+
+    const history = useHistory()
+
+    const setActive = () => {
+        selectHouse(allHouses)
+        allHouses.map((house) => {
+            history.push(`/select-house/${house.id}`)
+
+
+
+        })
+
+
+
+    }
+
+
+
 
 
     const handelNewHouse = () => {
@@ -38,7 +55,7 @@ const HouseList = () => {
                 <tbody>
                     {allHouses.map((house) => {
                         return (
-                            <tr key={house.id}>
+                            <tr key={house.id} onClick={setActive} >
                                 <td>{house.address}</td>
                                 <td>{house.country}</td>
                                 <td>{CurrencyFormatter.format(house.price)}</td>
