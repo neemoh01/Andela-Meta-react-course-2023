@@ -20,6 +20,7 @@ const HouseList = ({ selectHouse }) => {
     }
 
 
+
     const handelNewHouse = () => {
         const addHouse = {
             id: 67,
@@ -33,12 +34,12 @@ const HouseList = ({ selectHouse }) => {
 
     console.log("Loading Status: ", loadingState)
 
+
     if (loadingState !== loadingState.loaded) {
 
         return (
 
             <div>
-                <LoadingIndicator loadingState={loadingState} className="status" />
                 <div className="row featuredHouse">
                     <h5 className="col-md-12 text-center">
                         Houses Currently on the Market
@@ -73,6 +74,13 @@ const HouseList = ({ selectHouse }) => {
             </div>
         )
     }
+    else {
+        return (
+            <LoadingIndicator loadingState={loadingState} />
+        )
+    }
 }
+
+
 
 export default HouseList

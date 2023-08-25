@@ -9,5 +9,6 @@
 }
 
 .status {
-    display: none;
+    font-size: larger;
+    color: green;
 }
